@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="pic/icon.gif">
+<title> An Introduction to Special Relativity </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  h6 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+
+  h6 span { 
+    background:rgb(235, 235, 235); 
+    padding:0 10px; 
+}
+
+  :target::before {
+  content: "";
+  display: block;
+  height: 60px; /* fixed header height*/
+  margin: -60px 0 0; /* negative fixed header height */
+}
+input[type=number] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+input[type=number]:focus {
+    border: 3px solid #555;
+}
+.button1{
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.MichelsonMorleyExperiment iframe {display: block; width: 100%; height: 500px; border: none;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(235, 235, 235);
+  font-size:130%;
+  color:rgb(66, 66, 66);
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(99, 99, 99);
+}
+
+.subnav-content {
+  display: none;
+  position: fixed;
+  left: 0;
+  background-color: rgb(99, 99, 99);
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+<!--This is the Subnav-->
+<div class="navbar">
+  <a href="#Introduction">Introduction</a>
+  <div class="subnav">
+    <button class="subnavbtn"> Newtonian Physics <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#Newtonian Physics">Newtonian Physics</a>
+      <a href="#Reference Frame">Reference Frame</a>
+      <a href="#Absolute Time">Absolute</a>
+      <a href="#Galilean Relativity">Galilean Relativity</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Challenge <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#Challenge">Challenge</a>
+      <a href="#Maxwell's Equations">Maxwell's Equations</a>
+      <a href="#The Illusive Ether">The Illusive Ether</a>
+      <a href="#The Michelson-Morley Experiment">The Michelson-Morley Experiment</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Special Relativity <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#Special Relativity">Special Relativity</a>
+      <a href="#Simultaneity">Simultaneity</a>
+      <a href="#Time Dilation">Time Dilation</a>
+      <a href="#Length Contraction">Length Contraction</a>
+      <a href="#Relative Velocity">Relative Velocity</a>
+      <a href="#Relativistic Momentum">Relativistic Momentum</a>
+      <a href="#Relativistic Mass">Relativistic Mass</a>
+      <a href="#Relativistic Energy">Relativistic Energy</a>
+    </div>
+  </div>
+</div>
+<!--This is the end of Subnav-->
+<!--This is the article-->
+<div style="margin-top: 70px; padding:0 60px">
+  <h1> Special Relativity</h1>
+  <a href="https://en.wikipedia.org/wiki/Special_relativity" target="_blank"> <img src = "pic/World_line.svg" style="float:right;width:200px;height:200px;" > </a>
+  <h2 id="Introduction">0.Introduction </h2>
+  <p>Special relativity is one of the most important theoy in modern physcis. In 1905 Albert Einstein developed 
+    the theory of special relativity. This theory explains the limit on an object's speed and describes the 
+    consequences. In Albert Einstein's original treatment, the theory is based on two postulates:<br>
+    <ol type="1">
+    <li>The laws of physics are invariant (that is, identical) in all inertial frames of reference (that is, 
+      frames of reference with no acceleration).</li>
+    <li>The speed of light in vacuum is the same for all observers, regardless of the motion of the light 
+      source or observer.
+    </li>
+    </ol>
+    </p>
+    <hr>
+  <h2 id="Newtonian Physics">1.Newtonian Physics </h2>
+  <h3 id="Reference Frame">1.1.Reference Frame</h3>
+  <h4>1.1.1.Relativity</h4>
+  <p>Nothing is absolute rest, nothing is absolute moving. Ancient people recognize that they cannot 
+    distinct they are moving or not when they are on the boat. If you want to discribe your motion, 
+    you have to find a reference, in physics, we call it "frame of reference".</p>
+  <h4>1.1.2.Inertial Frame of Reference</h4>
+  <p>An inertial frame of reference (or a rest frame) is one that is moving in uniform motion. E.i. 
+    no interial force act on object in this frame of reference</p>
+  <h3 id="Absolute Time">1.2.Absolute Time, Absolute Length</h3>
+  <p>
+  In Newtonian physics, although they recognize the motion is relative, they think time is absolute 
+  and length is absolute as well. 1 secend in my frame of reference is exactly same in your frame
+   of reference. 1 metre in my frame of reference is also exactly same in your frame of reference.
+    This makes sense to most of people since 17th century to 20th century.
+  </p>
+  <h3 id="Galilean Relativity">1.3.Galilean Relativity</h3>
+  One of the direct consequences of absolute time and length is Galilean relativity.<br>
+  <img src="pic/Galilean Relativity.gif"><br>
+  <b>The transformation follows this:</b><br>
+  <ul>
+  <li>Relative position: X<sub>AC</sub> = X<sub>AB</sub> + X<sub>BC</sub></li>
+  <li>Relative velocity: V<sub>AC</sub> = V<sub>AB</sub> + V<sub>BC</sub></li>
+  <li>Relative acceleration: A<sub>AC</sub> = A<sub>AB</sub> + A<sub>BC</sub></li>
+  </ul>
+  <p><b>Properties:</b><br>
+    In an inertial frame, Newton’s first and second laws of motion are valid; Since all uniform 
+    motion are treated the same way, you may consider any inertial
+    frames of reference to be at rest. <br> 
+    <b>The Principle of Relativity: </b><br>
+    All laws of motion must apply equally in all inertial frames of reference.</p>
+  <hr>
+  <h2 id="Challenge">2.Challenge </h2>
+  <h3 id="Maxwell's Equations">2.1.Maxwell's Equations</h3>
+  <p>This is Maxwell's equations:<br>
+  <img src="pic/Maxwell'sEquations.svg" width="250" height="200"><br>
+  <a href="https://en.wikipedia.org/wiki/Maxwell%27s_equations" target="_blank"><em>Learn more about Maxwell's 
+    Equations</em></a><br>
+  The first two equations are called "Gauss' Law", it demostrates that the electric field come from 
+  a e<sup>+</sup> particle to a e<sup>-</sup> particle, and magnetic field are closed pathes. 
+  The thrid equation is called "Faraday's law", it shows that change of magnetic field can create 
+  electric field. The fourth equation is called "Ampere's law", it reveals that change of electric 
+  field can create magnetic field.<br><br>
+  The most important consequence of Maxwell's equation is light is electromagnetic waves. When conbine 
+  last two equations, it derives that :<br>
+  c=<sup>1</sup>&frasl;<sub>√εμ</sub>=299792458 m/s <br><br>
+  However, as we mentioned before, the velocity need a frame of reference, what's the frame of 
+  reference of the speed of light? The equations do not give us the answer. In addition, it has
+   these peculiar features:
+  <ol type="i">
+    <li>Does not mention the medium in which EM waves travels</li>
+    <li>When applying Galilean transformation (from which we obtain the velocity
+      addition rule) to Maxwell’s equations, asymmetry is introduced</li>
+    <li>Gauss’s law for magnetism break down: magnetic field lines appear to have
+      beginnings/ends</li>
+    <li>In some inertial frames of reference, Maxwell’s equations are simple and elegant,
+      but transform the equation into another inertial frame, the equations are ugly and
+      complex!</li>
+    <li>Physicists at the time began to theorize that (perhaps) there is an actual preferred
+      inertial frame of references</li>
+    <li>This seems to violate the principle of relativity</li>
+    </ol>
+  </p>
+  <h3 id="The Illusive Ether">2.2.The Illusive Ether</h3>
+      In this case Maxwell constract a hyothesis: the speed of light c0 is relative to a hypothetical subtance called
+      luminiferous aether (or just ether) that permeates the universe. Ether must have some fantastic properties:
+      <ol type="i">
+        <li>All space is filled with ether</li>
+        <li>Massless</li>
+        <li>Zero viscosity</li>
+        <li>Non-dispersive</li>
+        <li>Incompressible</li>
+        <li>Continuous at a very small (sub-atomic) scale</li>
+      </ol>
+      Do you believe the existence of Ether?
+  <h3 id="The Michelson-Morley Experiment">2.3.The Michelson-Morley Experiment</h3>
+  <p>Please read the article from wikipedia.</p>
+  <div class = MichelsonMorleyExperiment><iframe src="https://en.wikipedia.org/wiki/Michelson%E2%80%93Morley_experiment" style="border:none;"  title="Michelson–Morley experiment"></iframe></div>
+  <br> <b>Key facts:</b>
+  <ul>
+    <li>The experiment demonstrates that the speed of light travels horizontally and vertically is the same.</li>
+    <li>Lorentz, the person who wanted to save both the theory and the experiment, he generated his Lorentz transformation:<br>
+    <img src = "pic/lorentz.svg" width="250" height="200"></li>
+  </ul>
+  <hr>
+  <h2 id="Special Relativity">3.Special Relativity</h2>
+  <img src="pic/220px-Einstein_tongue.jpg" style="float: right;">
+  <p>1905 is the most thrift year in Modern Physics, Albert Einstein published his 5 most important paper. One of them is "On the Electrodynamics of Moving Bodies" - Special Relativity. 
+    He construct Postulates of Special Relativity to explain the Michelson-Morley experiment:
+    <ul>
+      <li><b>The Principle of Relativity:</b> All laws of physics must apply equally in all
+        inertial frames of reference.</li>
+      <li><b>The Principle of Invariant Light Speed:</b> As measured in any inertial
+        frame of reference, light always propagates in a vaccum with a definite
+        velocity c0, independent of the state of motion of the emitting body.</li>
+    </ul></p>
+  <p>The difference in Einstein's theory:
+    <ul>
+      <li>The speed of light is absolute (invariant), therefore</li>
+      <li>Space and time must be relative to the observer.</li>
+      </ul> 
+  </p>
+  <h3 id = "Simultaneity">3.1.Simultaneity</h3>
+  <p>The direct consequence of Einstein's theory is that change our understanding of Simultaneity.<br><br>
+  <img src = "pic/simultaneity1.gif"> 
+  <br>
+Let's do a thought experiment. Imagining there is train runing at .5c, two beams of light shoot from the equal
+ distance to the person on the train. At the Same time, there is a person stand right on the position of the person on the train. 
+Due to the 'The Principle of Invariant Light Speed', the person who doesn't move see the light beams at the same time;however, 
+the person on the train see the light in front of him/her before the light behind him. Therefore, the Simultaneity is actually depend the frame of reference!!!
+</p>
+  <h3 id = "Time Dilation">3.2.Time Dilation</h3>
+  <p>Einstein is really familiar with thought experiemnt, so, let's do another one.<br>
+    <img src="pic/Time-dilation-002-mod.png"><br>
+    Let's assume you are on a spaceship that travels at a speed v s.t. v is close to c. Now you have two parallel mirror as showed above, 
+    it photon then travels between these mirror. In you point of view, you and these mirrors are relative static, and the time cost 
+    the photon to travel A-B-A is ∆t=2L/c. On the other hand, a person who is rest to the ground saw that the time cost the photon to
+    travel A-B-A is ∆t'=2D/c. Moreover, by pythagorean theorem D^2=L^2+(1/2v∆t')^2. When combine these equations, we get the time dilation formula:<br>
+    <img src = "pic/time dilation eq.svg" height="100" width="200"></p>
+    <h4>Example1</h4>
+    <p>Kim is riding a rocket that speeds past an asteroid at v = 0.600c. If Kim
+      sees 10.0 s pass on her watch, how long would that time interval be as seen by Jim, an
+      observer on the asteroid? (3s.f.) 
+    <button type="button" onclick="alert('16.7s')">ANSWER</button></p>
+    <input type="number" id="TDp1" value=""><label style="font-size: 120%;"> sec </label><br>
+    <button class="button1" onclick="TDp1fun()">Submit</button>
+    <em><p id="TDp1output"></p></em>
+    <h4>Example2</h4>
+    <p>Kim is riding a rocket that speeds past an asteroid at 0.600c. If Jim, an
+      observer in the asteroid, sees 10.0 s pass on his watch, how long would that time
+      interval be as seen by Kim? (3s.f.)
+    <button type="button" onclick="alert('16.7s')">ANSWER</button></p>
+    <input type="number" id="TDp2" value=""><label style="font-size: 120%;"> sec </label><br>
+    <button class="button1" onclick="TDp2fun()">Submit</button>
+    <em><p id="TDp2output"></p></em>
+  <h3 id = "Length Contraction">3.3.Length Contraction</h3>
+    <p>The consequence of Time dilation is Length Contraction:<br>
+    <img src="pic/Length Contraction 1.svg" height="80"><br>
+    Therefore:<br>
+    <img src="pic/Length Contraction 2.svg" height="60"></p>
+    <h4>Example1</h4>
+    Captain Quick is a comic book hero who can run at nearly the speed of light. In his hand,
+he is carrying a bomb set to explode in 1.5 μs. The bomb must be placed into its bracket
+before this happens. The distance (L) between the flare and the bracket is 402 m. How far did he travel? Can he finish the mission?
+<button type="button" onclick="alert('300m')">ANSWER</button><br>
+    <input type="number" id="LCp1" value=""><label style="font-size: 120%;"> m </label><br>
+    <button class="button1" onclick="LCp1fun()">Submit</button>
+    <em><p id="LCp1output"></p></em>
+  <h3 id = "Relative Velocity">3.4.Relative Velocity</h3>
+  <p>Unlike in classical mechanics, velocities (speeds) do not simply add. We have to account
+    for time dilation and length contraction, which are included in the Lorentz
+    transformation</p>
+  <p><b>Einstein velocity addition rule:</b><br>
+  <img src = "pic/Einstein velocity.svg" height="90" width="200"></p>
+  <h3 id = "Relativistic Momentum">3.5.Relativistic Momentum</h3>
+  <p>The defination of momentum still the same:<br>
+  <img src = "pic/momentum.svg"height="60" width="120"><br>
+Therefore, subsitute x with Relativistic length:<br>
+<img src ="pic/momentum2.svg"height="100" width="400"></p>
+  <h3 id = "Relativistic Mass">3.6.Relativistic Mass</h3>
+  <p>From the relativistic momentum expression, we see the relativistic aspect to mass as
+    well:<br>
+    <img src="pic/mass.svg"height="100" width="200"></p>
+  <h3 id = "Relativistic Energy">3.7.Relativistic Energy</h3>
+  <p>The last topic is energy, and it is also the most importatn consequence of special relativity.</p>
+  <p>The defination of work does not change:<br>
+    <img src ="pic/work.svg" height="60" width="120">
+  </p>
+  <p>Therefore:<br>
+  <img src ="pic/energy part 1.svg"height="60"><br>
+  let:<br>
+  <img src="pic/gamma.svg"height="80"><br>
+  <br> Assuming that both v and p are continuous in time, we can apply the product rule:<br>
+  <img src = "pic/energy part 2.svg"height="30">
+  <br> sub it back to integral:<br>
+  <img src="pic/energy part 3.svg"height="60">
+  <br> By defination of γ:<br>
+  <img src ="pic/energy part 4.svg"height="60"><br>
+  sub it back:<br>
+  <img src="pic/energy part 5.svg" height="60"><br>
+  Therefore:<br>
+  <img src="pic/energy part 6.svg"height="30">
+  <br> consequencely:
+  <br><img src ="pic/e=mc^2.svg" height="30">
+  <br> This is the most famous eqation and it is the fundation of atomic bomb!!!
+  </p>
+  <h6><span>THE END</span></h6>
+  <h5>Relative resources:</h5>
+  <ol>
+  <li><a href="https://www.khanacademy.org/science/physics/special-relativity" target="_blank">Special relativity from Khan Academy</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/General_relativity" target="_blank">General relativity intro from wikipedia</a></li>
+  </ol>
+  <hr>
+  <footer>
+    <em><p>Author: Kristopher Zhao</p>
+    <p><a href="mailto:350111704@gapps.yrdsb.ca">350111704@gapps.yrdsb.ca</a></p></em>
+  </footer>
+</div>
+<!--This is the end of article-->
+<!--JS-->
+<script>
+  function TDp1fun() {
+    var TDp1x = document.getElementById("TDp1").value;
+    if (TDp1x==16.7) {
+    T_FTDp1="Congratulation! You got the right answer!";
+  } else {T_FTDp1="Try again!";
+  } 
+  document.getElementById("TDp1output").innerHTML = T_FTDp1;
+  }
+  function TDp2fun() {
+    var TDp2x = document.getElementById("TDp2").value;
+    if (TDp2x==16.7) {
+    T_FTDp2="Congratulation! You got the right answer!";
+  } else {T_FTDp2="Try again!";
+  } 
+  document.getElementById("TDp2output").innerHTML = T_FTDp2;
+  }
+  function LCp1fun() {
+    var LCp1x = document.getElementById("LCp1").value;
+    if (LCp1x==300) {
+    T_FLCp1="Congratulation! You got the right answer!";
+  } else {T_FLCp1="Try again!";
+  } 
+  document.getElementById("LCp1output").innerHTML = T_FLCp1;
+  }
+</script>
+<!--JS-->
+</body>
+</html>
